@@ -12,7 +12,7 @@ import ru.t1.MetricsProducer.exception.ServiceException;
 @Slf4j
 public class MetricService {
 
-    private final KafkaTemplate<String, Object> template;
+    private final KafkaTemplate<String, Metric> template;
 
     public void sendMsg(Metric msg) throws ServiceException {
         log.info("Отправка сообщения: {}", msg);
